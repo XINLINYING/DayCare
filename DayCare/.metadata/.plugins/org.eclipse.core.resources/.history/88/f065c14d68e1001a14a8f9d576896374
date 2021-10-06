@@ -1,0 +1,110 @@
+package edu.neu.csye6200;
+
+import java.io.*;
+
+public class Manager extends Person {
+    int ManagerId = 6200;
+    int Password = 6200;
+
+
+    public int getManagerId() {
+        return ManagerId;
+    }
+
+
+    public int getPassword() {
+        return Password;
+    }
+
+    public void hireTeacher(String teacher){
+        String file = "teacherCSV.csv";
+        CSVdata.writeTeacherFile();
+        BufferedWriter out = null ;
+        try  {
+            out = new  BufferedWriter( new OutputStreamWriter(
+                    new FileOutputStream(file,  true )));
+            out.write(teacher);
+        } catch  (Exception e) {
+            e.printStackTrace();
+        } finally  {
+            try  {
+                out.close();
+            } catch  (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void addStudent(String student){
+        String file = "studentCSV.csv";
+        CSVdata.writeTeacherFile();
+        BufferedWriter out = null ;
+        try  {
+            out = new  BufferedWriter( new OutputStreamWriter(
+                    new FileOutputStream(file,  true )));
+            out.write(student);
+        } catch  (Exception e) {
+            e.printStackTrace();
+        } finally  {
+            try  {
+                out.close();
+            } catch  (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void showStudent(){
+        String fileName = "studentCSV.csv";
+        File file = new File(fileName);
+        BufferedReader reader = null;
+        try {
+            System.out.println("以行为单位读取文件内容，一次读一整行：");
+            reader = new BufferedReader(new FileReader(file));
+            String tempString = null;
+            int line = 1;
+            // 一次读入一行，直到读入null为文件结束
+            while ((tempString = reader.readLine()) != null) {
+                // 显示行号
+                System.out.println("line " + line + ": " + tempString);
+                line++;
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+    }
+    public void showTeacher(){
+        String fileName = "teacherCSV.csv";
+        File file = new File(fileName);
+        BufferedReader reader = null;
+        try {
+            System.out.println("以行为单位读取文件内容，一次读一整行：");
+            reader = new BufferedReader(new FileReader(file));
+            String tempString = null;
+            int line = 1;
+            // 一次读入一行，直到读入null为文件结束
+            while ((tempString = reader.readLine()) != null) {
+                // 显示行号
+                System.out.println("line " + line + ": " + tempString);
+                line++;
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+    }
+
+}

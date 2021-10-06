@@ -1,0 +1,20 @@
+INDEX VERSION 1.131+D:\computer_language\Summer2for2020\assignment\finalProject\0818_10\.metadata\.plugins\org.eclipse.jdt.core
+2379453787.index
+3900472317.index
+929624528.index
+266227578.index
+594565225.index
+2909620028.index
+876726299.index
+3442471438.index
+4232194499.index
+3227619992.index
+3800907823.index
+2215967194.index
+1541574563.index
+1419948626.index
+449384428.index
+3526781274.index
+946392313.index
+2958399308.index
+1692615786.index
